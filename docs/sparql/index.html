@@ -27,15 +27,19 @@
     <dd>SPARQLエンドポイントのURL: http://lib-lod.tsunagun.org/sparql/ndc8/query</dd>
   </ul>
   
-  <script src="https://cdn.jsdelivr.net/npm/yasgui@2.7.27/dist/yasgui.min.js"></script>
-              <script type="text/javascript">
-              var isil = 'http://mdlab.slis.tsukuba.ac.jp/isil/query';
-              var yasgui = YASGUI(document.getElementById("yasgui"), {
-              endpoint: isil,
-              yasqe: {
-              sparql: {endpoint: isil}
-              }
-              });
-              </script>
+  <section id="sparql">
+    <div id='yasgui'>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/yasgui@2.7.27/dist/yasgui.min.js"></script>
+    <script type="text/javascript">
+      var isil = 'http://lib-lod.tsunagun.org/sparql/isil-lod-jp/query';
+      var yasgui = YASGUI(document.getElementById("yasgui"), {
+        endpoint: isil,
+        yasqe: {
+          sparql: {endpoint: isil}
+        }
+      });
+    </script>
+  </section>
 </body>
 </html>
