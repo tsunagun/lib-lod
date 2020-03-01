@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>SPARQLエンドポイント<!-- タイトル記述 -->
+  <meta name="author" content="Tsunagu HONMA" />
+  <link href="https://cdn.jsdelivr.net/npm/yasgui@2.7.27/dist/yasgui.min.css" rel='stylesheet' type='text/css'/>
+        <!-- cssファイルの読み込み -->
+</head>
+<body>
+  このサイトでは、下記のデータをSPARQLエンドポイントに登録して公開している。
+  <dl>
+    <dt>ISIL-LOD（図書館及び関連組織のための国際標準識別子）試行版</dt>
+    <dd>入手元: <a href="https://www.ndl.go.jp/jp/dlib/standards/opendataset/index.html#ISIL_trial">国立国会図書館 オープンデータセット</a></dd>
+    <dd>SPARQLエンドポイントのURL: http://lib-lod.tsunagun.org/sparql/isil-lod-jp/query</dd>
+    
+    <dt>NDLSH（国立国会図書館件名標目表）</dt>
+    <dd>入手元: <a href="https://id.ndl.go.jp/information/download/">Web NDL Authorities 一括ダウンロード用ファイル</a></dd>
+    <dd>SPARQLエンドポイントのURL: http://lib-lod.tsunagun.org/sparql/ndlsh/query</dd>
+    
+    <dt>NDC（日本十進分類法）第9版</dt>
+    <dd>入手元: <a href="https://www.jla.or.jp/committees/bunrui/tabid/789/Default.aspx">NDC（日本十進分類法）</a></dd>
+    <dd>SPARQLエンドポイントのURL: http://lib-lod.tsunagun.org/sparql/ndc9/query</dd>
+    
+    <dt>NDC（日本十進分類法）第8版</dt>
+    <dd>入手元: <a href="https://www.jla.or.jp/committees/bunrui/tabid/789/Default.aspx">NDC（日本十進分類法）</a></dd>
+    <dd>SPARQLエンドポイントのURL: http://lib-lod.tsunagun.org/sparql/ndc8/query</dd>
+  </ul>
+  
+  <script src="https://cdn.jsdelivr.net/npm/yasgui@2.7.27/dist/yasgui.min.js"></script>
+              <script type="text/javascript">
+              var isil = 'http://mdlab.slis.tsukuba.ac.jp/isil/query';
+              var yasgui = YASGUI(document.getElementById("yasgui"), {
+              endpoint: isil,
+              yasqe: {
+              sparql: {endpoint: isil}
+              }
+              });
+              </script>
+</body>
+</html>
