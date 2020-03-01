@@ -8,31 +8,40 @@
         <!-- cssファイルの読み込み -->
 </head>
 <body>
-  このサイトでは、下記のデータをSPARQLエンドポイントに登録して公開している。
+  <h1>SPARQLエンドポイント</h1>
+  <h2>このページについて</h2>
+  <p>このサイトでは、下記のデータをSPARQLエンドポイントに登録して公開しています。</p>
+  <p>各エンドポイントにSPARQLクエリを送信する場合は、エンドポイントのURLに送信してください。</p>
+  <p>ブラウザ上でSPARQLクエリの検索結果を確認したい場合は、本ページ下部にあるクエリ入力・実行フォームを利用してください。</p>
+  
+  <h2>SPARQLエンドポイントの一覧</h2>
   <dl>
     <dt>ISIL-LOD（図書館及び関連組織のための国際標準識別子）試行版</dt>
-    <dd>入手元: <a href="https://www.ndl.go.jp/jp/dlib/standards/opendataset/index.html#ISIL_trial">国立国会図書館 オープンデータセット</a></dd>
-    <dd>SPARQLエンドポイントのURL: http://lib-lod.tsunagun.org/sparql/isil-lod-jp/query</dd>
+    <dd>入手元: <a href="https://www.ndl.go.jp/jp/dlib/standards/opendataset/index.html#ISIL_trial" target="_blank">国立国会図書館 オープンデータセット</a></dd>
+    <dd>SPARQLエンドポイントのURL: https://lib-lod.tsunagun.org/sparql/isil-lod-jp/query</dd>
     
     <dt>NDLSH（国立国会図書館件名標目表）</dt>
-    <dd>入手元: <a href="https://id.ndl.go.jp/information/download/">Web NDL Authorities 一括ダウンロード用ファイル</a></dd>
-    <dd>SPARQLエンドポイントのURL: http://lib-lod.tsunagun.org/sparql/ndlsh/query</dd>
+    <dd>入手元: <a href="https://id.ndl.go.jp/information/download/" target="_blank">Web NDL Authorities 一括ダウンロード用ファイル</a></dd>
+    <dd>SPARQLエンドポイントのURL: https://lib-lod.tsunagun.org/sparql/ndlsh/query</dd>
     
     <dt>NDC（日本十進分類法）第9版</dt>
-    <dd>入手元: <a href="https://www.jla.or.jp/committees/bunrui/tabid/789/Default.aspx">NDC（日本十進分類法）</a></dd>
-    <dd>SPARQLエンドポイントのURL: http://lib-lod.tsunagun.org/sparql/ndc9/query</dd>
+    <dd>入手元: <a href="https://www.jla.or.jp/committees/bunrui/tabid/789/Default.aspx" target="_blank">NDC（日本十進分類法）</a></dd>
+    <dd>SPARQLエンドポイントのURL: https://lib-lod.tsunagun.org/sparql/ndc9/query</dd>
     
     <dt>NDC（日本十進分類法）第8版</dt>
-    <dd>入手元: <a href="https://www.jla.or.jp/committees/bunrui/tabid/789/Default.aspx">NDC（日本十進分類法）</a></dd>
-    <dd>SPARQLエンドポイントのURL: http://lib-lod.tsunagun.org/sparql/ndc8/query</dd>
-  </ul>
+    <dd>入手元: <a href="https://www.jla.or.jp/committees/bunrui/tabid/789/Default.aspx" target="_blank">NDC（日本十進分類法）</a></dd>
+    <dd>SPARQLエンドポイントのURL: https://lib-lod.tsunagun.org/sparql/ndc8/query</dd>
+  </dl>
   
+  <h2>クエリ入力・実行フォーム</h2>
+  <p>デフォルトではISIL-LODのエンドポイントに接続されます。</p>
+  <p>接続先を変える場合は、SPARQLクエリ入力部の上部にある入力ボックスに、接続したいエンドポイントのURLを入力してください。</p>
   <section id="sparql">
     <div id='yasgui'>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/yasgui@2.7.27/dist/yasgui.min.js"></script>
     <script type="text/javascript">
-      var isil = 'http://lib-lod.tsunagun.org/sparql/isil-lod-jp/query';
+      var isil = 'https://lib-lod.tsunagun.org/sparql/isil-lod-jp/query';
       var yasgui = YASGUI(document.getElementById("yasgui"), {
         endpoint: isil,
         yasqe: {
